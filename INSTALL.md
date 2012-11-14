@@ -17,8 +17,7 @@ choice:
 
     apt-get install bind9 isc-dhcp-server tftpd php5-mysql mysql-server \
     apache2 libapache2-mod-php5
-
-
+ 
     cat > /etc/xinetd.d/atftpd << EOF
     service tftp
     {
