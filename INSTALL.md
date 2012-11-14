@@ -13,16 +13,20 @@ You'll need the following software installed:
 
 You should set the following variables in your bourne compatible shell of
 choice
+
 BASEDIR
 
-eg
+
+Example
 
     BASEDIR=/app/kickstart
+
 
 Install the required packages
 
     apt-get install bind9 isc-dhcp-server tftpd php5-mysql mysql-server \
     apache2 libapache2-mod-php5
+
  
 Then configure the atftp server for use in xinetd
 
@@ -39,7 +43,11 @@ Then configure the atftp server for use in xinetd
        disable = no
     }
     EOF
-`stop xinetd`
-`start xinetd`
+
+
+Restart xinetd
+
+    stop xinetd
+    start xinetd
 
 
