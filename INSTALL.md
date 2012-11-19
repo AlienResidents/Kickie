@@ -71,12 +71,12 @@ Configure apache accordingly from your variables
 
 Configure DHCP as needed
 
-    cat > /etc/xinetd.d/atftpd << EOF
+    cat > /etc/dhcp/dhcpd.conf << EOF
       subnet 10.227.192.32 netmask 255.255.255.224 {
         range 10.227.192.36 10.227.192.62;
         option domain-name-servers 10.227.192.34;
         option bootfile-name "pxelinux.0";
-        option domain-name "tmcr.target.local";
+        option domain-name "localdomain";
         option routers 10.227.192.34;
         default-lease-time 1800;
         max-lease-time 3600;
