@@ -71,7 +71,7 @@ Configure apache accordingly from your variables
 
 Configure DHCP as needed
 
-    cat > /etc/dhcp/dhcpd.conf << EOF
+    cat >> /etc/dhcp/dhcpd.conf << EOF
       subnet 10.227.192.32 netmask 255.255.255.224 {
         range 10.227.192.36 10.227.192.62;
         option domain-name-servers 10.227.192.34;
