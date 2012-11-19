@@ -31,7 +31,7 @@ Example
 
 Install the required packages
 
-    apt-get install bind9 isc-dhcp-server tftpd php5-mysql mysql-server \
+    apt-get install bind9 isc-dhcp-server atftpd php5-mysql mysql-server \
     apache2 libapache2-mod-php5
 
  
