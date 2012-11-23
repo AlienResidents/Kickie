@@ -9,7 +9,6 @@ You'll need the following software installed:
 * mysql-server
 * apache2
 * libapache2-mod-php5
-* 
 
 You should set the following variables in your bourne compatible shell of
 choice
@@ -37,19 +36,7 @@ Install the required packages
  
 Then configure the atftp server for use in xinetd using the variables you've set
 
-    cat > /etc/xinetd.d/atftpd << EOF
-    service tftp
-    {
-       protocol = udp
-       port = 69
-       socket_type = dgram
-       wait = yes
-       user = nobody
-       server = /usr/sbin/atftpd
-       server_args = /app/kickstart/pxe_boot -s
-       disable = no
-    }
-    EOF
+    cp atftp /etc/xinetd.d/
 
 
 Restart xinetd
@@ -71,18 +58,7 @@ Configure apache accordingly from your variables
 
 Configure DHCP as needed
 
-    cat >> /etc/dhcp/dhcpd.conf << EOF
-      subnet 10.227.192.32 netmask 255.255.255.224 {
-        range 10.227.192.36 10.227.192.62;
-        option domain-name-servers 10.227.192.34;
-        option bootfile-name "pxelinux.0";
-        option domain-name "localdomain";
-        option routers 10.227.192.34;
-        default-lease-time 1800;
-        max-lease-time 3600;
-        next-server 10.227.192.34;
-      }
-    EOF
+    cat dhcpd.conf >> /etc/dhcp/dhcpd.conf
 
 
 
