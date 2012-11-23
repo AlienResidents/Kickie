@@ -1,0 +1,72 @@
+html {
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  width: 70%;
+  margin: auto;
+  border: solid thin #000;
+  background-color: #fff;
+  text-align: center;
+}
+
+#body-wrapper {
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  overflow: auto;
+}
+
+.row-even {
+  background-color: #999;
+}
+
+.row-odd {
+  background-color: #bbb;
+}
+
+th {
+  background-color: #555;
+  color: #ccc;
+  padding: 5px;
+}
+
+tr.body:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+td {
+  padding: 5px;
+}
+
+.traffic-green {
+  background-color: #fff;
+}
+
+.circleBase {
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    behavior: url(PIE.htc);
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000
+}
+
+.blue {
+    background: blue;
+}
+
+.green {
+    background: green;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.red {
+    background: red;
+}

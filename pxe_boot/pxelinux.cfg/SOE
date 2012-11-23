@@ -1,0 +1,4 @@
+label SOE_64bit
+  menu label ^SOE - 64bit
+  kernel ubuntu-installer/amd64/linux ks=http://10.227.192.226/kickstart/config/ks/ks.php?a=start
+  append vga=788 initrd=ubuntu-installer/amd64/initrd.gz ipv6.disable=1

@@ -1,0 +1,5 @@
+label localboot
+  menu label ^Boot Into Existing OS
+  localboot 0
+  timeout 50
+  menu timeoutrow 13

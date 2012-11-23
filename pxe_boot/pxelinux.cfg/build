@@ -1,0 +1,9 @@
+include pxelinux.cfg/header
+
+default SOE_64bit
+include pxelinux.cfg/localboot
+
+include pxelinux.cfg/SOE
+  menu default
+
+default ubuntu-installer/i386/boot-screens/vesamenu.c32

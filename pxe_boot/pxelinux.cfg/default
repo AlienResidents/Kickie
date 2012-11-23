@@ -1,0 +1,31 @@
+# D-I config version 2.0
+menu hshift 13
+menu width 49
+menu margin 8
+
+prompt 1
+
+menu title Boot Menu 
+menu background ubuntu-installer/i386/boot-screens/splash.png
+menu color title	* #FFFFFFFF *
+menu color border	* #00000000 #00000000 none
+menu color sel		* #ffffffff #76a1d0ff *
+menu color hotsel	1;7;37;40 #ffffffff #76a1d0ff *
+menu color tabmsg	* #ffffffff #00000000 *
+menu color help		37;40 #ffdddd00 #00000000 none
+menu vshift 12
+menu rows 10
+menu helpmsgrow 15
+# The command line must be at least one line from the bottom.
+menu cmdlinerow 16
+menu timeoutrow 16
+menu tabmsgrow 18
+menu tabmsg Press ENTER to boot or TAB to edit a menu entry
+
+default localboot
+include pxelinux.cfg/localboot
+  menu default
+
+include pxelinux.cfg/SOE
+
+default ubuntu-installer/i386/boot-screens/vesamenu.c32

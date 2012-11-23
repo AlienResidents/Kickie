@@ -1,0 +1,11 @@
+service tftp
+{
+   protocol = udp
+   port = 69
+   socket_type = dgram
+   wait = yes
+   user = nobody
+   server = /usr/sbin/atftpd
+   server_args = --logfile /var/log/atftp.log /app/kickstart/pxe_boot
+   disable = no
+}
