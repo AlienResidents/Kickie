@@ -24,7 +24,7 @@ Example
     BASEDIR=/app/kickstart
     BASEDIR=$BASE_DIR/pxe_boot
     MEDIA_DIR=$BASE_DIR/media
-    HTML_DIR="$BASE_DIR/html
+    HTML_DIR=$BASE_DIR/html
     DHCP_SUBNET=""
 
 
