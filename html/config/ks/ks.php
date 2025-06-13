@@ -33,7 +33,9 @@ $result->free();
 
 if ($_GET['a']) {
   $when = $_GET['a'];
-  $query = "update servers set last_build_$when=now() where mac_address='$mac_address'";
+  $query = sprintf("update servers set last_build_%s=now() where mac_address='%s'",
+    $mysqli->real_escape_string($when),
+    $mysqli->real_escape_string($mac_address));
   $result = $mysqli->query($query) or die($mysqli->error);
   if ($when == "finish") {
     if (file_exists("$pxe_boot_area/$hostname")) {
